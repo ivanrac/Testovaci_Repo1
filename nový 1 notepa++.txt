@@ -1,0 +1,27 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+import time
+
+# 👉 Cesta k chromedriver.exe
+chrome_driver_path = r"C:\chromedriver\chromedriver.exe"
+
+options = Options()
+options.add_argument('--start-maximized')
+
+service = Service(chrome_driver_path)
+driver = webdriver.Chrome(service=service, options=options)
+
+driver.get("https://www.google.com")
+
+time.sleep(5)
+driver.quit()
+Ulož ako:
+
+Súbor → Uložiť ako...
+
+Názov súboru:
+
+Kopírovať
+Upraviť
+test_selenium.py
